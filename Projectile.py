@@ -74,16 +74,16 @@ def mortar_calculator(mortar_coords, target_coords):
 # Streamlit app interface
 st.title("Mortar Calculator")
 
-# Input fields with integer display and decimal input capability
+# Input fields
 st.sidebar.header("Launch Point (x0, y0, z0)")
-x0 = st.sidebar.number_input("x0", value=0, step=1, format="%d")
-y0 = st.sidebar.number_input("y0", value=0, step=1, format="%d")
-z0 = st.sidebar.number_input("z0", value=0, step=1, format="%d")
+x0 = st.sidebar.number_input("x0", value=0.0)
+y0 = st.sidebar.number_input("y0", value=0.0)
+z0 = st.sidebar.number_input("z0", value=0.0)
 
 st.sidebar.header("Target Point (xt, yt, zt)")
-xt = st.sidebar.number_input("xt", value=0, step=1, format="%d")
-yt = st.sidebar.number_input("yt", value=0, step=1, format="%d")
-zt = st.sidebar.number_input("zt", value=0, step=1, format="%d")
+xt = st.sidebar.number_input("xt", value=0.0)
+yt = st.sidebar.number_input("yt", value=0.0)
+zt = st.sidebar.number_input("zt", value=0.0)
 
 # Perform calculation when the button is clicked
 if st.button("Calculate"):
