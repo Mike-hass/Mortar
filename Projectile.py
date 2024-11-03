@@ -74,18 +74,14 @@ def mortar_calculator(mortar_coords, target_coords):
 # Streamlit app interface
 st.title("Mortar Calculator")
 
-# Input fields in a single line
+# Single-line input for coordinates
 st.sidebar.header("Launch Point (x0, y0, z0)")
-col1, col2, col3 = st.sidebar.columns(3)
-x0 = col1.number_input("x0", value=0.0)
-y0 = col2.number_input("y0", value=0.0)
-z0 = col3.number_input("z0", value=0.0)
+launch_coords = st.sidebar.text_input("Enter launch coordinates as x0, y0, z0:", "0, 0, 0")
+x0, y0, z0 = map(float, launch_coords.split(','))
 
 st.sidebar.header("Target Point (xt, yt, zt)")
-col4, col5, col6 = st.sidebar.columns(3)
-xt = col4.number_input("xt", value=0.0)
-yt = col5.number_input("yt", value=0.0)
-zt = col6.number_input("zt", value=0.0)
+target_coords = st.sidebar.text_input("Enter target coordinates as xt, yt, zt:", "0, 0, 0")
+xt, yt, zt = map(float, target_coords.split(','))
 
 # Perform calculation when the button is clicked
 if st.button("Calculate"):
