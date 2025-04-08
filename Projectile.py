@@ -3,7 +3,7 @@ import math
 
 # Constants
 GRAVITY = 196.2  # Studs/second^2
-CHARGE_VELOCITIES = [800, 840, 880, 920, 960]  # Velocities for C0 to C4 in Studs/Second
+CHARGE_VELOCITIES = [900, 940, 980, 1020, 1060]  # Velocities for C0 to C4 in Studs/Second
 MAX_ANGLE = 85.25  # Maximum angle of elevation in degrees
 MIN_ANGLE = 44.25  # Minimum angle of elevation in degrees
 
